@@ -1,5 +1,4 @@
 import {
-  mobile,
   backend,
   creator,
   web,
@@ -25,6 +24,25 @@ import {
   threejs,
 } from "../assets";
 
+export const bio = {
+  name: "Arafat",
+  roles: [
+    "Frontend Web Developer",
+    "MERN Stack Developer",
+    "UI Designer",
+    "Programmer",
+  ],
+  description:
+    "I develop 3D visuals, user interfaces, and web applications. I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning, I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+  github: "https://github.com/arafatGithubCode",
+  resume:
+    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
+  linkedin: "https://www.linkedin.com/in/arafat-hossain-033a18282/",
+  twitter: "",
+  insta: "",
+  facebook: "https://www.facebook.com/profile.php?id=100067866734531",
+};
+
 export const navLinks = [
   {
     id: "about",
@@ -42,19 +60,15 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Fronted Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "MERN Stack Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Web Designer",
     icon: creator,
   },
 ];
