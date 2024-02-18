@@ -21,7 +21,7 @@ const Tech = () => {
             <h3 className="text-center text-2xl text-slate-400">
               {technology.title}
             </h3>
-            <div className="grid grid-cols-5">
+            <div className="grid grid-cols-4 xs:grid-cols-5">
               {technology.frontend &&
                 technology.frontend.map((item, index) => (
                   <div key={`frontend-${index}`}>
