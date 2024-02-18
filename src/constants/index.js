@@ -90,7 +90,7 @@ const services = [
 const technologies = [
   {
     title: "Frontend",
-    skills: [
+    frontend: [
       {
         name: "React Js",
         icon: reactjs,
@@ -139,7 +139,7 @@ const technologies = [
   },
   {
     title: "Backend",
-    skills: [
+    backend: [
       {
         name: "Node Js",
         icon: nodejs,
@@ -160,7 +160,7 @@ const technologies = [
   },
   {
     title: "Others",
-    skills: [
+    others: [
       {
         name: "Git",
         icon: github,
@@ -315,6 +315,7 @@ const projects = [
     ],
     image: jobit,
     source_code_link: "https://github.com/",
+    live_app: "https://www.facebook.com/",
   },
   {
     name: "Trip Guide",

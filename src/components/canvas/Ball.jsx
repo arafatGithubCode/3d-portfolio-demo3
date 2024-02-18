@@ -12,13 +12,13 @@ import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
 import { motion } from "framer-motion";
 
-const BallBackend = (props) => {
+const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={1.5}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
@@ -38,7 +38,7 @@ const BallBackend = (props) => {
   );
 };
 
-const BallCanvasBackend = ({ icon, name }) => {
+const BallCanvas = ({ icon, name }) => {
   return (
     <div>
       <Canvas
@@ -48,12 +48,11 @@ const BallCanvasBackend = ({ icon, name }) => {
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls enableZoom={false} />
-          <BallBackend imgUrl={icon} />
+          <Ball imgUrl={icon} />
         </Suspense>
         <Preload all />
       </Canvas>
-
-      <div className="mt-2 ml-5 whitespace-nowrap bg-gradient-to-r from-sky-500 via-pink-500 to-green-500 inline-block text-transparent bg-clip-text text-2xl font-bold border-b border-gray-500 relative">
+      <div className="whitespace-pre-wrap bg-gradient-to-r from-sky-500 via-pink-500 to-green-500 inline-block text-transparent bg-clip-text text-sm font-bold border-b border-gray-500 relative -mt-20">
         {name}
         <motion.div
           animate={{
@@ -71,4 +70,4 @@ const BallCanvasBackend = ({ icon, name }) => {
   );
 };
 
-export default BallCanvasBackend;
+export default BallCanvas;

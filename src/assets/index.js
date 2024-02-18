@@ -7,7 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import favicon from "../../public/favicon.png";
+import favicon from "/favicon.png";
 
 import css from "./tech/css.png";
 import framerMotion from "./tech/framer-motion.svg";
