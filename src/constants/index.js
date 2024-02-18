@@ -9,21 +9,31 @@ import {
   reactjs,
   redux,
   tailwind,
+  bootstrap,
   nodejs,
   mongodb,
-  git,
   steadfast,
   mern,
   figma,
-  docker,
+  framerMotion,
   carrent,
   jobit,
   tripguide,
   threejs,
   mobile,
+  express,
+  firebase,
+  github,
+  vsCode,
+  postman,
+  photoshop,
+  insomenia,
+  word,
+  excel,
+  favicon,
 } from "../assets";
 
-export const bio = {
+const bio = {
   name: "Arafat",
   roles: [
     "Frontend Web Developer",
@@ -40,9 +50,10 @@ export const bio = {
   twitter: "",
   insta: "",
   facebook: "https://www.facebook.com/profile.php?id=100067866734531",
+  profileImg: favicon,
 };
 
-export const navLinks = [
+const navLinks = [
   {
     id: "about",
     title: "About",
@@ -78,56 +89,119 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    title: "Frontend",
+    skills: [
+      {
+        name: "React Js",
+        icon: reactjs,
+      },
+      {
+        name: "Redux",
+        icon: redux,
+      },
+      {
+        name: "Framer Motion",
+        icon: framerMotion,
+      },
+      {
+        name: "Typescript",
+        icon: typescript,
+      },
+      {
+        name: "EJS",
+        icon: "https://miro.medium.com/v2/resize:fit:1278/1*i-YOI4nMBnyPfjSulLxDLA.png",
+      },
+      {
+        name: "HTML",
+        icon: html,
+      },
+      {
+        name: "CSS",
+        icon: css,
+      },
+      {
+        name: "JavaScript",
+        icon: javascript,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: tailwind,
+      },
+      {
+        name: "Bootstrap",
+        icon: bootstrap,
+      },
+      {
+        name: "Three JS",
+        icon: threejs,
+      },
+    ],
   },
   {
-    name: "CSS 3",
-    icon: css,
+    title: "Backend",
+    skills: [
+      {
+        name: "Node Js",
+        icon: nodejs,
+      },
+      {
+        name: "Express Js",
+        icon: express,
+      },
+      {
+        name: "MongoDB",
+        icon: mongodb,
+      },
+      {
+        name: "Firebase",
+        icon: firebase,
+      },
+    ],
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    title: "Others",
+    skills: [
+      {
+        name: "Git",
+        icon: github,
+      },
+      {
+        name: "GitHub",
+        icon: github,
+      },
+      {
+        name: "Netlify",
+        icon: "https://w7.pngwing.com/pngs/600/484/png-transparent-netlify-static-web-page-gulp-js-github-github-blue-angle-logo-thumbnail.png",
+      },
+      {
+        name: "VS Code",
+        icon: vsCode,
+      },
+      {
+        name: "Postman",
+        icon: postman,
+      },
+      {
+        name: "Insomnia",
+        icon: insomenia,
+      },
+      {
+        name: "Adobe Photoshop",
+        icon: photoshop,
+      },
+      {
+        name: "Figma",
+        icon: figma,
+      },
+      {
+        name: "Word",
+        icon: word,
+      },
+      {
+        name: "Excel",
+        icon: excel,
+      },
+    ],
   },
 ];
 
@@ -265,4 +339,12 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  bio,
+  navLinks,
+};

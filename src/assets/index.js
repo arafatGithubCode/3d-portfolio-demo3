@@ -7,8 +7,10 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import favicon from "../../public/favicon.png";
+
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
+import framerMotion from "./tech/framer-motion.svg";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -18,8 +20,17 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
+import bootstrap from "./tech/bootstrap.svg";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import firebase from "./tech/firebase.png";
+import excel from "./tech/excel.png";
+import express from "./tech/express.png";
+import postman from "./tech/postman.png";
+import word from "./tech/word.png";
+import vsCode from "./tech/vsCode.png";
+import photoshop from "./tech/photoshop.png";
+import insomenia from "./tech/insomenia.png";
 
 import meta from "./company/meta.png";
 import mern from "./company/mern.png";
@@ -41,7 +52,7 @@ export {
   menu,
   close,
   css,
-  docker,
+  framerMotion,
   figma,
   git,
   html,
@@ -51,8 +62,17 @@ export {
   reactjs,
   redux,
   tailwind,
+  bootstrap,
   typescript,
   threejs,
+  word,
+  vsCode,
+  postman,
+  firebase,
+  express,
+  excel,
+  photoshop,
+  insomenia,
   meta,
   mern,
   starbucks,
@@ -61,4 +81,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  favicon,
 };
