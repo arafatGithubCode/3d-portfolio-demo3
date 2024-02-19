@@ -1,10 +1,62 @@
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_pipgokq",
+        "template_rer2usq",
+        {
+          from_name: form.name,
+          to_name: "Arafat",
+          from_email: form.email,
+          to_email: "arafat24official@gmail.com",
+          message: form.message,
+        },
+        "E0Rb1PjeeToVGKFAS"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          alert("Something went wrong!");
+          setLoading(false);
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <div className="flex xl:flex-row xl:mt-12 flex-col-reverse gap-10 overflow-hidden max-w-3xl mx-auto">
       <motion.div
@@ -14,7 +66,11 @@ const Contact = () => {
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
 
-        <form className="mt-12 flex flex-col gap-8">
+        <form
+          onSubmit={handleSubmit}
+          ref={formRef}
+          className="mt-12 flex flex-col gap-8"
+        >
           <label className="flex flex-col">
             <span className="text-white font-bold mb-4">Your Name</span>
             <input
@@ -22,6 +78,8 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="What's your good name?"
+              value={form.name}
+              onChange={handleChange}
             />
           </label>
           <label className="flex flex-col">
@@ -31,6 +89,8 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="What's your email address?"
+              value={form.email}
+              onChange={handleChange}
             />
           </label>
           <label className="flex flex-col">
@@ -40,10 +100,12 @@ const Contact = () => {
               name="message"
               rows={7}
               placeholder="What you want to say?"
+              value={form.message}
+              onChange={handleChange}
             />
           </label>
-          <button className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium shadow-lg shadow-primary">
-            send
+          <button className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium shadow-lg shadow-primary text-center">
+            {loading ? "Sending..." : "send"}
           </button>
         </form>
       </motion.div>
