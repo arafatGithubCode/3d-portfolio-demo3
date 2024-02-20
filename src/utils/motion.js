@@ -37,6 +37,11 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
+export const fadeInUp = {
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+};
+
 export const zoomIn = (delay, duration) => {
   return {
     hidden: {

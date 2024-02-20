@@ -1,79 +1,16 @@
 /* eslint-disable react/prop-types */
-import { Tilt } from "react-tilt";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn } from "../utils/motion";
 import { projects } from "../constants/index";
-import { github } from "../assets";
-
-const ProjectCard = ({
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-  live_app,
-  index,
-}) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px]"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            className="w-full h-full rounded-2xl"
-            src={image}
-            alt="project_image"
-          />
-          <div className="absolute inset-0 flex justify-end m-3">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-105"
-            >
-              <img
-                className="w-1/2 h-1/2 object-contain"
-                src={github}
-                alt="source_code"
-              />
-            </div>
-          </div>
-          <div className="absolute top-0 flex justify-end m-3">
-            <div
-              onClick={() => window.open(live_app, "_blank")}
-              className="bg-green-500 p-1 w-32 rounded-xl flex justify-center items-center cursor-pointer hover:scale-105 text-slate-100 hover:bg-green-600 font-medium"
-            >
-              View Live App
-            </div>
-          </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-[24px] font-bold text-white">{name}</h3>
-          <p className="mt-2 text-[14px] text-secondary">{description}</p>
-        </div>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {tags.map((tag, index) => (
-            <p
-              className={`text-[14px] ${tag.color}`}
-              key={`${tag.name}-${index}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
-  );
-};
+import ProjectCard from "./card/ProjectCard";
 
 const Works = () => {
+  const [toggle, setToggle] = useState("all");
+
   return (
     <>
       <motion.div>
@@ -93,10 +30,56 @@ const Works = () => {
           different technologies, and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-14 flex flex-wrap gap-6 justify-center">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className="flex justify-between items-center border-2 border-[#854CE6] rounded-xl px-5 gap-3 font-medium text-sm xs:text-lg md:text-xl text-[#854CE6] mt-12 max-w-xl mx-auto">
+        <button
+          className={`${
+            toggle === "all" ? "bg-[#854CE6] bg-opacity-30 px-1" : ""
+          }`}
+          value="all"
+          onClick={() => setToggle("all")}
+        >
+          All
+        </button>
+        <div className="w-[3px] h-8 bg-[#854CE6]" />
+        <button
+          className={`${
+            toggle === "mern" ? "bg-[#854CE6] bg-opacity-30 px-1" : ""
+          }`}
+          value="mern"
+          onClick={() => setToggle("mern")}
+        >
+          MERN
+        </button>
+        <div className="w-[3px] h-8 bg-[#854CE6]" />
+        <button
+          className={`${
+            toggle === "react" ? "bg-[#854CE6] bg-opacity-30 px-1" : ""
+          }`}
+          value="react"
+          onClick={() => setToggle("react")}
+        >
+          React
+        </button>
+        <div className="w-[3px] h-8 bg-[#854CE6]" />
+        <button
+          className={`${
+            toggle === "rew css & js" ? "bg-[#854CE6] bg-opacity-30 px-1" : ""
+          }`}
+          value="rew css & js"
+          onClick={() => setToggle("rew css & js")}
+        >
+          Raw CSS & JS
+        </button>
+      </div>
+      <p className="text-center mt-5 uppercase text-slate-400 text-sm">{`Showing ${toggle} web apps`}</p>
+      <div className="mt-14 flex flex-wrap gap-6 justify-center hover:gap-14">
+        {toggle === "all"
+          ? projects.map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))
+          : projects
+              .filter((item) => item.category === toggle)
+              .map((project) => <ProjectCard key={project.id} {...project} />)}
       </div>
     </>
   );
