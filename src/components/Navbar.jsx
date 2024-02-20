@@ -45,11 +45,11 @@ const Navbar = () => {
             alt="Logo"
             className="w-12 h-10 object-cover rounded-full"
           />
-          <p className="text-white text-[18px] cursor-pointer font-bold flex">
-            Arafat &nbsp; <span>|&nbsp; Web Developer</span>
+          <p className="text-white text-[18px] cursor-pointer font-bold flex whitespace-nowrap">
+            Web Developer
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-6 lg:gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -58,11 +58,17 @@ const Navbar = () => {
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
             >
-              <a href={`${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <a
+          href=""
+          className="hidden lg:inline-block text-[#854CE6] border border-[#854CE6] px-5 py-1 rounded-xl font-medium text-lg hover:bg-[#854CE6] hover:text-white transition duration-200 ease-in-out"
+        >
+          Github Profile
+        </a>
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -86,9 +92,15 @@ const Navbar = () => {
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                 >
-                  <a href={nav.id}>{nav.title}</a>
+                  <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <a
+                href=""
+                className="text-[#854CE6] border border-[#854CE6] px-5 py-1 rounded-xl font-medium text-lg hover:bg-[#854CE6] hover:text-white transition duration-200 ease-in-out"
+              >
+                Github Profile
+              </a>
             </ul>
           </div>
         </div>
