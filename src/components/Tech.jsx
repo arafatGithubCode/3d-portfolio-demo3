@@ -3,6 +3,7 @@ import { technologies } from "../constants";
 import { BallCanvas } from "./canvas";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Tech = () => {
   return (
@@ -14,7 +15,7 @@ const Tech = () => {
       </p>
       <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-5">
         {technologies.map((technology, index) => (
-          <div
+          <motion.div
             key={index}
             className="border p-7 my-5 rounded-xl border-teal-600"
           >
@@ -25,7 +26,11 @@ const Tech = () => {
               {technology.frontend &&
                 technology.frontend.map((item, index) => (
                   <div key={`frontend-${index}`}>
-                    <BallCanvas icon={item.icon} name={item.name} />
+                    <BallCanvas
+                      icon={item.icon}
+                      name={item.name}
+                      index={index}
+                    />
                   </div>
                 ))}
             </div>
@@ -33,14 +38,22 @@ const Tech = () => {
               {technology.backend &&
                 technology.backend.map((item, index) => (
                   <div key={`frontend-${index}`}>
-                    <BallCanvas icon={item.icon} name={item.name} />
+                    <BallCanvas
+                      icon={item.icon}
+                      name={item.name}
+                      index={index}
+                    />
                   </div>
                 ))}
             </div>
             <div className="flex flex-wrap gap-5">
               {technology.others &&
                 technology.others.map((item, index) => (
-                  <div className="flex items-center" key={`frontend-${index}`}>
+                  <motion.div
+                    variants={fadeIn("right", "tween", 0.5 * index, 0.85)}
+                    className="flex items-center"
+                    key={`frontend-${index}`}
+                  >
                     <img
                       className="rounded-full w-[3rem]"
                       src={item.icon}
@@ -60,10 +73,10 @@ const Tech = () => {
                         className="w-10 h-5 bg-slate-300/10 absolute top-0 rounded-xl"
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

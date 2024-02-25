@@ -11,6 +11,7 @@ import {
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
 import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -38,9 +39,9 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon, name }) => {
+const BallCanvas = ({ icon, name, index }) => {
   return (
-    <div>
+    <motion.div variants={fadeIn("right", "tween", 0.4 * index, 0.75)}>
       <Canvas
         frameloop="demand"
         dpr={[1, 2]}
@@ -66,7 +67,7 @@ const BallCanvas = ({ icon, name }) => {
           className="w-10 h-5 bg-slate-300/10 absolute top-0 rounded-xl"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

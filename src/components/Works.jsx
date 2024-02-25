@@ -72,14 +72,16 @@ const Works = () => {
         </button>
       </div>
       <p className="text-center mt-5 uppercase text-slate-400 text-sm">{`Showing ${toggle} web apps`}</p>
-      <div className="mt-14 flex flex-wrap gap-6 justify-center hover:gap-14">
+      <div className="mt-14 flex flex-wrap gap-6 justify-center">
         {toggle === "all"
           ? projects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
+              <ProjectCard key={project.id} {...project} project={project} />
             ))
           : projects
               .filter((item) => item.category === toggle)
-              .map((project) => <ProjectCard key={project.id} {...project} />)}
+              .map((project) => (
+                <ProjectCard key={project.id} {...project} project={project} />
+              ))}
       </div>
     </>
   );

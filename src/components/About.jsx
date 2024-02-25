@@ -53,9 +53,12 @@ const About = () => {
           </motion.p>
         </div>
         <div className="flex flex-col justify-center items-center gap-10">
-          <div className="w-[70%]">
+          <motion.div
+            variants={fadeIn("left", "tween", 0.5, 0.5)}
+            className="w-[70%]"
+          >
             <img className="w-full" src={bio.profileImg} alt="profile" />
-          </div>
+          </motion.div>
           <a
             className="bg-pink-500 px-10 py-3 rounded-xl text-xl font-semibold hover:bg-pink-600 hover:scale-105 transition duration-200 ease-in-out"
             href={bio.resume}
