@@ -32,10 +32,7 @@ import vsCode from "./tech/vsCode.png";
 import photoshop from "./tech/photoshop.png";
 import insomenia from "./tech/insomenia.png";
 
-import meta from "./company/meta.png";
 import mern from "./company/mern.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import steadfast from "./company/steadfast.png";
 
 import blog from "./blog.jpg";
@@ -43,6 +40,16 @@ import estate from "./estate.jpg";
 import expense from "./expense.jpg";
 import hotel from "./hotel.jpg";
 import weather from "./weather.jpg";
+import todo from "./todo.jpg";
+import port from "./port.jpg";
+import space from "./space.jpg";
+import dice from "./dice.jpg";
+import pomodo from "./pomodo.jpg";
+import recipe from "./recipe.jpg";
+import rock from "./rock.jpg";
+import search from "./search.jpg";
+import tip from "./tip.jpg";
+import timer from "./timer.jpg";
 
 export {
   logo,
@@ -75,10 +82,7 @@ export {
   excel,
   photoshop,
   insomenia,
-  meta,
   mern,
-  starbucks,
-  tesla,
   steadfast,
   favicon,
   blog,
@@ -86,4 +90,14 @@ export {
   expense,
   hotel,
   weather,
+  todo,
+  port,
+  space,
+  pomodo,
+  recipe,
+  rock,
+  search,
+  tip,
+  dice,
+  timer,
 };

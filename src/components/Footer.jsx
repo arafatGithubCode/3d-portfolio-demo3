@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { navLinks } from "../constants";
+import { bio, navLinks } from "../constants";
 import { SectionWrapper } from "../hoc";
 
 import {
@@ -35,27 +35,27 @@ const Footer = () => {
       </ul>
       <ul className="flex justify-center items-center gap-10 text-2xl cursor-pointer black-gradient rounded-full py-2">
         <li className="hover:text-blue-600">
-          <a href="">
+          <a href={bio.facebook} target="_blank">
             <FaFacebookF />
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href="">
+          <a href={bio.linkedin} target="_blank">
             <FaLinkedinIn />
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href="">
+          <a href={bio.insta} target="_blank">
             <FaInstagram />
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href="">
+          <a href={bio.twitter} target="_blank">
             <FaTwitter />
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href="">
+          <a href={bio.github} target="_blank">
             <FaGithubSquare />
           </a>
         </li>

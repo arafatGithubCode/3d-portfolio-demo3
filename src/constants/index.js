@@ -35,6 +35,16 @@ import {
   expense,
   hotel,
   weather,
+  todo,
+  port,
+  space,
+  dice,
+  pomodo,
+  timer,
+  recipe,
+  search,
+  tip,
+  rock,
 } from "../assets";
 
 const bio = {
@@ -52,7 +62,7 @@ const bio = {
     "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/arafat-hossain-033a18282/",
   twitter: "",
-  insta: "",
+  insta: "https://www.instagram.com/8720arafat/",
   facebook: "https://www.facebook.com/profile.php?id=100067866734531",
   profileImg: favicon,
 };
@@ -296,10 +306,10 @@ const projects = [
     ],
     features: {
       one: "MVC structure for efficient file management.",
-      two: "Utilizes fetch for seamless data retrieval.",
+      two: "Efficiently handles data retrieval with fetch, redux, and jsonwebtoken.",
       three: "Employs Formik for secure form authentication.",
       four: "Enhanced styling with Flowbite for rapid development.",
-      five: "Complete CRUD operation",
+      five: "Complete CRUD operation and search functionality with mongoose.",
     },
     category: "mern",
     image: blog,
@@ -415,6 +425,64 @@ const projects = [
   },
   {
     id: uuidv4(),
+    name: "Portfolio App",
+    description:
+      "Web based portfolio app that allows to user to showcase his skills and expertise to his client.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Material UI",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Used styled-components",
+      two: "Create custom json for constant data",
+      three: "Maintain complete responsiveness",
+      four: "Utilizes React Toast for intelligent alert messaging.",
+      five: "Create react components for reusability",
+    },
+    category: "react",
+    image: port,
+    source_code_link: "https://github.com/arafatGithubCode/Demo-profile-me",
+    live_app: "",
+  },
+  {
+    id: uuidv4(),
+    name: "Space App",
+    description:
+      "Web-based UI design app showcasing space information with animated elements. Inspired by Figma's design concepts.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AOS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes AOS for dynamic animations.",
+      two: "Creates custom JSON for consistent data handling.",
+      three: "Ensures full responsiveness across all devices.",
+      four: "Prioritizes user comfort with intuitive design.",
+      five: "Utilizes React components for enhanced reusability.",
+    },
+    category: "react",
+    image: space,
+    source_code_link: "https://github.com/arafatGithubCode/space-app-react",
+    live_app: "https://tcj-space.netlify.app/",
+  },
+  {
+    id: uuidv4(),
     name: "Weather Checker",
     description:
       "Web-based app providing current weather temperatures for any location.",
@@ -443,6 +511,256 @@ const projects = [
     image: weather,
     source_code_link: "https://github.com/arafatGithubCode/weather-checker",
     live_app: "https://weather-checker-chi.vercel.app/",
+  },
+  {
+    id: uuidv4(),
+    name: "Stop Watch App",
+    description:
+      "Projects crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can handle time.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: timer,
+    source_code_link: "https://github.com/arafatGithubCode/stop-watch",
+    live_app: "https://arafatgithubcode.github.io/stop-watch/",
+  },
+  {
+    id: uuidv4(),
+    name: "Image Search App",
+    description:
+      "Projects crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can search images.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: search,
+    source_code_link: "https://github.com/arafatGithubCode/image-search-app",
+    live_app: "https://arafatgithubcode.github.io/image-search-app/",
+  },
+
+  {
+    id: uuidv4(),
+    name: "Todo App",
+    description:
+      "Streamline your tasks with our Todo web app, offering seamless task management and organization.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can update and delete his tasks",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: todo,
+    source_code_link: "https://github.com/arafatGithubCode/todo-app",
+    live_app: "https://arafatgithubcode.github.io/todo-app/",
+  },
+  {
+    id: uuidv4(),
+    name: "Dice Roll App",
+    description:
+      "This project crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences. Dice roll game.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can play dice roll",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: dice,
+    source_code_link: "https://github.com/arafatGithubCode/dice-roll",
+    live_app: "https://arafatgithubcode.github.io/dice-roll/",
+  },
+  {
+    id: uuidv4(),
+    name: "Tip Calculator App",
+    description:
+      "This project crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can calculate tips.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: tip,
+    source_code_link: "https://github.com/arafatGithubCode/tip-calculator",
+    live_app: "https://arafatgithubcode.github.io/tip-calculator/",
+  },
+  {
+    id: uuidv4(),
+    name: "Recipe Book App",
+    description:
+      "This project crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.Recipe Book App.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can search recipes.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: recipe,
+    source_code_link: "https://github.com/arafatGithubCode/recipe-app",
+    live_app: "https://arafatgithubcode.github.io/recipe-app/",
+  },
+  {
+    id: uuidv4(),
+    name: "Rock Paper Scissors Game",
+    description:
+      "Projects crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can play game.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: rock,
+    source_code_link:
+      "https://github.com/arafatGithubCode/rock-paper-scissor-game-",
+    live_app: "https://arafatgithubcode.github.io/rock-paper-scissor-game-/",
+  },
+  {
+    id: uuidv4(),
+    name: "Pomodoro Timer App",
+    description:
+      "Projects crafted with JavaScript, CSS, and HTML for dynamic, visually appealing web experiences.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "User can set back counter timer.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
+    category: "rew css & js",
+    image: pomodo,
+    source_code_link: "https://github.com/arafatGithubCode/pomodoro-timer",
+    live_app: "https://arafatgithubcode.github.io/pomodoro-timer/",
   },
 ];
 

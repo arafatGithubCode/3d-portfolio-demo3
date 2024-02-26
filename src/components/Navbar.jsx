@@ -63,7 +63,8 @@ const Navbar = () => {
           ))}
         </ul>
         <a
-          href=""
+          href="https://github.com/arafatGithubCode"
+          target="_blank"
           className="hidden lg:inline-block text-[#854CE6] border border-[#854CE6] px-5 py-1 rounded-xl font-medium text-lg hover:bg-[#854CE6] hover:text-white transition duration-200 ease-in-out"
         >
           Github Profile
@@ -96,7 +97,8 @@ const Navbar = () => {
                 </li>
               ))}
               <a
-                href=""
+                href="https://github.com/arafatGithubCode"
+                target="_blank"
                 className="text-[#854CE6] border border-[#854CE6] px-5 py-1 rounded-xl font-medium text-lg hover:bg-[#854CE6] hover:text-white transition duration-200 ease-in-out"
               >
                 Github Profile

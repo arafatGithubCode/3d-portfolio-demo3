@@ -30,7 +30,7 @@ const ProjectModal = ({ project, visible, onClose }) => {
           className="self-end cursor-pointer text-3xl bg-black rounded-full hover:scale-105"
         />
         <div>
-          <img className="w-full" src={image} alt={name} />
+          <img className="w-full max-h-[350px]" src={image} alt={name} />
         </div>
         <div className="mt-5">
           <h3 className="text-[24px] font-bold text-white">{name}</h3>
