@@ -39,6 +39,10 @@ import tesla from "./company/tesla.png";
 import steadfast from "./company/steadfast.png";
 
 import blog from "./blog.jpg";
+import estate from "./estate.jpg";
+import expense from "./expense.jpg";
+import hotel from "./hotel.jpg";
+import weather from "./weather.jpg";
 
 export {
   logo,
@@ -78,4 +82,8 @@ export {
   steadfast,
   favicon,
   blog,
+  estate,
+  expense,
+  hotel,
+  weather,
 };

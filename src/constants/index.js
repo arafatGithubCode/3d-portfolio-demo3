@@ -31,6 +31,10 @@ import {
   excel,
   favicon,
   blog,
+  estate,
+  expense,
+  hotel,
+  weather,
 } from "../assets";
 
 const bio = {
@@ -335,27 +339,29 @@ const projects = [
     ],
     features: {
       one: "MVC structure for efficient file management.",
-      two: "Utilizes fetch for seamless data retrieval.",
-      three: "Employs Formik for secure form authentication.",
-      four: "Enhanced styling with Flowbite for rapid development.",
+      two: "Efficiently handles data retrieval with axios, redux, and jsonwebtoken.",
+      three: "Uses express validator for secure form authentication.",
+      four: "Integrates Swiper for dynamic image sliders.",
+      five: "Supports complete CRUD operations for seamless data management.",
     },
     category: "mern",
-    image: blog,
-    source_code_link: "https://github.com/arafatGithubCode/MERN-blog-clone",
-    live_app: "https://mern-blog-app-lhjg.onrender.com/",
+    image: estate,
+    source_code_link:
+      "https://github.com/arafatGithubCode/MERN-Estate-re-complete",
+    live_app: "https://estate.100jsprojects.com/",
   },
   {
     id: uuidv4(),
-    name: "React",
+    name: "Expense Tracker",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Effortlessly track daily expenses with ease. Add, edit, and delete transactions, keeping a comprehensive history for reference. Stay organized and in control of your finances with complete CRUD operations.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
@@ -364,27 +370,30 @@ const projects = [
       },
     ],
     features: {
-      one: "MVC structure for efficient file management.",
-      two: "Utilizes fetch for seamless data retrieval.",
-      three: "Employs Formik for secure form authentication.",
-      four: "Enhanced styling with Flowbite for rapid development.",
+      one: "Enhanced reusability with custom hooks.",
+      two: "Effortless data retrieval with fetch.",
+      three: "Integrated OAuth for streamlined authentication.",
+      four: "Utilizes React Toast for intelligent alert messaging.",
+      five: "Leverages Firebase as the database solution.",
     },
     category: "react",
-    image: "",
-    source_code_link: "https://github.com/",
+    image: expense,
+    source_code_link:
+      "https://github.com/arafatGithubCode/React-Expense-Tracker-App",
+    live_app: "https://fir-setup-1bc0f.web.app/",
   },
   {
     id: uuidv4(),
-    name: "Raw CSS & JS",
+    name: "Hotel Booking",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed a MERN real estate platform for seamless property and restaurant transactions. Empowering users to list, rent, and sell with ease.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
@@ -392,9 +401,48 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    features: {
+      one: "Enhanced reusability with custom hooks.",
+      two: "Effortless data retrieval with fetch.",
+      three: "Integrated OAuth for streamlined authentication.",
+      four: "Utilizes React Toast for intelligent alert messaging.",
+      five: "Leverages Firebase as the database solution.",
+    },
+    category: "react",
+    image: hotel,
+    source_code_link: "https://github.com/arafatGithubCode/realtor",
+    live_app: "https://realtor-sepia.vercel.app/",
+  },
+  {
+    id: uuidv4(),
+    name: "Weather Checker",
+    description:
+      "Web-based app providing current weather temperatures for any location.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html",
+        color: "pink-text-gradient",
+      },
+    ],
+    features: {
+      one: "Utilizes raw JavaScript for functionality.",
+      two: "Seamless data retrieval using fetch.",
+      three: "Interactive styling with raw CSS.",
+      four: "Fully responsive design maintained.",
+      five: "Utilizes the latest HTML structure.",
+    },
     category: "rew css & js",
-    image: "",
-    source_code_link: "https://github.com/",
+    image: weather,
+    source_code_link: "https://github.com/arafatGithubCode/weather-checker",
+    live_app: "https://weather-checker-chi.vercel.app/",
   },
 ];
 
