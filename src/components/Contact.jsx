@@ -28,8 +28,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        "service_pipgokq",
-        "template_rer2usq",
+        "service_rwzj0c9",
+        "template_md73214",
         {
           from_name: form.name,
           to_name: "Arafat",
@@ -37,7 +37,7 @@ const Contact = () => {
           to_email: "arafat24official@gmail.com",
           message: form.message,
         },
-        "E0Rb1PjeeToVGKFAS"
+        "AVeg99Wfyt3fVKJ9X"
       )
       .then(
         () => {
@@ -74,7 +74,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-bold mb-4">Your Name</span>
             <input
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium border border-gray-500"
               type="text"
               name="name"
               placeholder="What's your good name?"
@@ -85,7 +85,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-bold mb-4">Your Email</span>
             <input
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium border border-gray-500"
               type="email"
               name="email"
               placeholder="What's your email address?"
@@ -96,7 +96,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-bold mb-4">Your Message</span>
             <textarea
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg font-medium border border-gray-500"
               name="message"
               rows={7}
               placeholder="What you want to say?"

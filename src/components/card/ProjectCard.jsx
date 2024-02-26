@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { github } from "../../assets";
 import { fadeInUp } from "../../utils/motion";
+import ProjectModal from "../ProjectModal";
+import { useState } from "react";
 
 const ProjectCard = ({
   name,
@@ -11,7 +13,11 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_app,
+  project,
 }) => {
+  const [openModal, setOpenModal] = useState(false);
+  const closeModal = () => setOpenModal(false);
+
   return (
     <>
       <motion.div variants={fadeInUp} initial="hidden" animate="show">
@@ -57,11 +63,19 @@ const ProjectCard = ({
               </p>
             ))}
           </div>
-          <a className="bg-pink-500 p-2 mt-3 rounded text-center transition-transform duration-1000 ease-in-out cursor-pointer hover:bg-pink-600 translate-y-28 group-hover:translate-y-0 block">
-            Source Code
-          </a>
+          <div
+            onClick={() => setOpenModal(true)}
+            className="p-2 mt-3 rounded text-center transition-transform duration-1000 ease-in-out translate-y-28 group-hover:translate-y-0 bg-pink-500 hover:bg-pink-600 cursor-pointer"
+          >
+            See Details
+          </div>
         </Tilt>
       </motion.div>
+      <ProjectModal
+        visible={openModal}
+        onClose={closeModal}
+        project={project}
+      />
     </>
   );
 };

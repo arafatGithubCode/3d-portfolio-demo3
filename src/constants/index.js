@@ -18,8 +18,6 @@ import {
   mern,
   figma,
   framerMotion,
-  carrent,
-  jobit,
   threejs,
   mobile,
   express,
@@ -32,6 +30,7 @@ import {
   word,
   excel,
   favicon,
+  blog,
 } from "../assets";
 
 const bio = {
@@ -258,9 +257,9 @@ const experiences = [
 const projects = [
   {
     id: uuidv4(),
-    name: "MERN",
+    name: "Blog Web app",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Introducing my web based blog app with interactive dashboard functionality where users can publish posts with images and manage their personal profile.",
     tags: [
       {
         name: "react",
@@ -271,13 +270,79 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "expressJS",
         color: "pink-text-gradient",
       },
+      {
+        name: "NodeJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Formik",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Flowbite React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
     ],
+    features: {
+      one: "MVC structure for efficient file management.",
+      two: "Utilizes fetch for seamless data retrieval.",
+      three: "Employs Formik for secure form authentication.",
+      four: "Enhanced styling with Flowbite for rapid development.",
+      five: "Complete CRUD operation",
+    },
     category: "mern",
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: blog,
+    source_code_link: "https://github.com/arafatGithubCode/MERN-blog-clone",
+    live_app: "https://mern-blog-app-lhjg.onrender.com/",
+  },
+  {
+    id: uuidv4(),
+    name: "Real Estate",
+    description:
+      "Developed a MERN real estate platform for seamless property and restaurant transactions. Empowering users to list, rent, and sell with ease.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "expressJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "NodeJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Formik",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    features: {
+      one: "MVC structure for efficient file management.",
+      two: "Utilizes fetch for seamless data retrieval.",
+      three: "Employs Formik for secure form authentication.",
+      four: "Enhanced styling with Flowbite for rapid development.",
+    },
+    category: "mern",
+    image: blog,
+    source_code_link: "https://github.com/arafatGithubCode/MERN-blog-clone",
+    live_app: "https://mern-blog-app-lhjg.onrender.com/",
   },
   {
     id: uuidv4(),
@@ -298,8 +363,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    features: {
+      one: "MVC structure for efficient file management.",
+      two: "Utilizes fetch for seamless data retrieval.",
+      three: "Employs Formik for secure form authentication.",
+      four: "Enhanced styling with Flowbite for rapid development.",
+    },
     category: "react",
-    image: jobit,
+    image: "",
     source_code_link: "https://github.com/",
   },
   {
@@ -322,7 +393,7 @@ const projects = [
       },
     ],
     category: "rew css & js",
-    image: jobit,
+    image: "",
     source_code_link: "https://github.com/",
   },
 ];
