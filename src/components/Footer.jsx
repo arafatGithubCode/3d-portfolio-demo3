@@ -18,7 +18,7 @@ const Footer = () => {
       <h3 className="text-center text-[#915EFF] text-2xl font-semibold">
         Arafat Hossain
       </h3>
-      <ul className="flex justify-center items-center gap-10 black-gradient rounded-full py-2">
+      <ul className="flex justify-center items-center gap-10 black-gradient rounded-full py-2 flex-wrap">
         {navLinks.map((nav) => (
           <li
             key={nav.id}
@@ -35,11 +35,6 @@ const Footer = () => {
       </ul>
       <ul className="flex justify-center items-center gap-10 text-2xl cursor-pointer black-gradient rounded-full py-2">
         <li className="hover:text-blue-600">
-          <a href={bio.facebook} target="_blank">
-            <FaFacebookF />
-          </a>
-        </li>
-        <li className="hover:text-blue-600">
           <a href={bio.linkedin} target="_blank">
             <FaLinkedinIn />
           </a>
@@ -50,13 +45,18 @@ const Footer = () => {
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href={bio.twitter} target="_blank">
-            <FaTwitter />
+          <a href={bio.github} target="_blank">
+            <FaGithubSquare />
           </a>
         </li>
         <li className="hover:text-blue-600">
-          <a href={bio.github} target="_blank">
-            <FaGithubSquare />
+          <a href={bio.facebook} target="_blank">
+            <FaFacebookF />
+          </a>
+        </li>
+        <li className="hover:text-blue-600">
+          <a href={bio.twitter} target="_blank">
+            <FaTwitter />
           </a>
         </li>
       </ul>

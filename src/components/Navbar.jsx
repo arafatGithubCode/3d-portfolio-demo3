@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { navLinks } from "../constants";
+import { navLinks, bio } from "../constants";
 import { styles } from "../styles";
-import { close, logo, menu } from "../assets";
+import { close, logo, menu, github } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -68,6 +68,13 @@ const Navbar = () => {
           className="hidden lg:inline-block text-[#854CE6] border border-[#854CE6] px-5 py-1 rounded-xl font-medium text-lg hover:bg-[#854CE6] hover:text-white transition duration-200 ease-in-out"
         >
           Github Profile
+        </a>
+        <a
+          href={bio.github}
+          target="_blank"
+          className="hidden md:inline w-[2.5rem] lg:hidden hover:scale-105"
+        >
+          <img className="w-full" src={github} alt="Github" />
         </a>
         <div className="md:hidden flex flex-1 justify-end items-center">
           <img

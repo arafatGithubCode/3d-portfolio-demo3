@@ -104,7 +104,7 @@ const Contact = () => {
               onChange={handleChange}
             />
           </label>
-          <button className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium shadow-lg shadow-primary text-center">
+          <button className="bg-pink-500 hover:bg-pink-600 py-2 text-white rounded-lg outline-none border-none font-medium shadow-lg shadow-primary text-center uppercase text-xl">
             {loading ? "Sending..." : "send"}
           </button>
         </form>
